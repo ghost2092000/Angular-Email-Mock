@@ -14,6 +14,8 @@ export class CommentComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  goo(){
+    console.log("helllloooooooo");
+  }
 
 }

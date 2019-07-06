@@ -1,9 +1,10 @@
 <!-- {{message.name}} -->
 
-<div *ngFor="let emaill of message">
-<div class = "mw-100" style= "border: 2px solid red; height: 25%;">
+<div *ngFor="let emaill of message" style = "border: 15px dotted dodgerblue">
+<div (click)="goo()" class = "mw-100" style= "border: 2px solid red; height: 150px;">
+
 <div style = "display: flex; justify-content: space-between; padding-top: 10px;
-padding-left: 15px; padding-right: 15px; padding-bottom:0;
+padding-left: 15px; padding-right: 15px; padding-bottom:0; border: 2px solid greenyellow;
 ">
     <!--Name-->
     <p>{{ emaill.name }}</p>

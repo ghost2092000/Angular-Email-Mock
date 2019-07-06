@@ -1,1 +1,23 @@
-<div class="row" style ="height: 20%; border: 2px solid plum;">
+<!-- {{message.name}} -->
+
+<div *ngFor="let emaill of message">
+<div class = "mw-100" style= "border: 2px solid red; height: 25%;">
+<div style = "display: flex; justify-content: space-between; padding-top: 10px;
+padding-left: 15px; padding-right: 15px; padding-bottom:0;
+">
+    <!--Name-->
+    <p>{{ emaill.name }}</p>
+    <!--Date-->
+    <p>{{ emaill.date }}</p>
+</div>
+
+<div style = "padding-left: 15px; padding-top: 0;">
+    <!--Subject-->
+    <p>{{ emaill.subject}}</p>
+</div>
+<div style = "padding-left: 15px; padding-top: 0;">
+    <!--Comments-->
+    <p>{{ emaill.comment}}</p>
+</div>
+</div>
+</div>

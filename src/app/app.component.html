@@ -44,27 +44,26 @@
 
 
             <div class="row d-flex align-items-center justify-content-center" style=" height: 10%; border: 3px dotted aqua;">
-              <button id ="boton">new message</button>
-
+              <button id = "boton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"> new inbox</button>
             </div>
 
 
           
-            <div class="row" style=" height: 30%; border: 3px dotted aqua;">
+            <div class="row" style=" height: 30%; border: 3px dotted rgb(255, 112, 112);">
                 
 
                 <div class="col " style="border:2px solid blue; background-color: lightgray; ">
 
                     <div class="row"  style=" height: 15%; border: 3px dotted aqua; color: blue">
-                        <i class = "fa fa-share" style = " "></i>
-                        <button (click)="goo()">kkkkkk</button>
+                      <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+                      <button id="inbox"(click)="goo()" style="background-color: lightgray; border: lightgray;">inbox</button>
                        
                     </div>
                    
 
 
 
-                    <app-inbox id = "redd"
+                    <app-inbox id = "redd" 
                         style= "
                         margin:0 0;
                         padding: 0 0; 
@@ -76,44 +75,53 @@
 
             </div>
 
-
-
-
            
       </div>
 
 
 
-      <div class="col-8 " style="border:2px solid blue; ">
-          <p></p>
+      <div class="col-8 " style="border:2px solid red; margin: 0; padding: 0;">
 
-          <div class="center row" style=" height: 30%; border: 3px dotted aqua; height: 8%;">
+          <div class="center row" style="  border: 3px dotted aqua; height: 8%;  margin: 0 0; padding: 0 0;">
                 
 
-            <div class="col " style="border:2px solid blue; ">
+            <div class="col " style="border:2px solid blue;  margin: 0; padding: 0;">
                 <input class="glossyBtn" style=" border-radius: 10px; width: 600px;">
-                <button> <img src="https://i.ya-webdesign.com/images/media-player-buttons-png-7.png" style = "width: 300px; height: 30px; "></button>
+
+                <i class="fa fa-caret-left" aria-hidden="true"></i>
+                <i class="fa fa-backward" aria-hidden="true"></i>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
             </div> 
+
+           
 
           </div>
 
-          <app-comment id = "redd"
-                        style= "
-                        margin:0 0;
-                        padding: 0 0; 
-                        "></app-comment>
-  
+
+          <div style = "border: 2px solid orange; height: 92%" class= "row overflow-auto"> 
+          
+          <app-comment [message]="email">  </app-comment>
+          
+          </div>
+
   
       </div>
     
     </div>
   
-  
+ 
+
   </div>
 
 
-<i class = "fa fa-share" style = " color: blue"></i>
-<i class = "fa fa-facebook"></i>
-<script src=""></script>
 
+
+
+
+
+
+
+
+  
 <!-- <img src="https://files.slack.com/files-pri/T87F8UMCL-FKL78GPC2/screen_shot_2019-06-26_at_3.25.03_pm.png" style = "width: 100vw; height: 100vh;"> -->

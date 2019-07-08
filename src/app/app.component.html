@@ -3,29 +3,29 @@
 <div class="container-fluid" style="height: 100vh; display: fixed">
 
   
-    <div class="row" style=" height: 100%; border: 2px solid red; display: fixed;">
+    <div class="row" style=" height: 100%; display: fixed;">
   
-      <div class="col-4 " style="border:2px solid blue; background-color: lightgray; display: fixed">
+      <div class="col-4 " style=" background-color: rgb(73, 73, 73); display: fixed">
            
   
 
 
               
-            <div class="row" id = "tron" style=" height: 15%; border: 3px dotted black; display: fixed">
+            <div class="row" id = "tron" style=" height: 15%;  display: fixed">
               
-              <div class="container-fluid" style=" border: 2px solid rgb(104, 10, 25)">
+              <div class="container-fluid" style=" background-color: rgb(99, 99, 99); ">
               
-                  <div class="row" style=" height: 100%; border: 2px solid rgb(255, 112, 112); background-color: blueviolet;">
+                  <div class="row" style=" height: 100%; ">
                   
 
-                      <div class="col-3 d-flex align-items-center justify-content-center" style="border:2px solid blue;  ">
+                      <div class="col-3 d-flex align-items-center justify-content-center" >
                           <p></p>
                           <img class="tron"src="https://i.imgur.com/WybxO5n.jpg" >
                       </div>
 
-                      <div class="col-9 d-flex align-items-center justify-content-center" style="border:2px solid blue; background-color: lightgray; ">
+                      <div class="col-9 d-flex align-items-center justify-content-center" style=" ">
                         <div><h1 style = "font-size: 20px; display: block; text-align: center;" > Big Chungus</h1>  
-                        <p class="" style="border:2px solid blue;">bigChungus33333@aol.com</p></div>
+                        <p class=" hello" >bigChungus33333@aol.com</p></div>
                       </div>
 
 
@@ -46,21 +46,19 @@
 
 
 
-            <div class="row d-flex align-items-center justify-content-center" style=" height: 10%; border: 3px dotted aqua;">
+            <div class="row d-flex align-items-center justify-content-center" style=" height: 10%;">
               <button id = "boton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"> new inbox</button>
             </div>
 
 
           
-            <div class="row" style=" height: 30%; border: 3px dotted rgb(255, 112, 112);">
+            <div class="row" style=" height: 30%; ">
                 
 
-                <div class="col " style="border:2px solid blue; background-color: lightgray; ">
+                <div class="col " >
 
-                    <div class="row"  style=" height: 15%; border: 3px dotted aqua; color: blue">
-                      <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
-                      <button id="inbox"(click)="goo()" style="background-color: lightgray; border: lightgray;">inbox</button>
-                       
+                    <div class="row "  >
+                      <button class="fa fa-caret-square-o-down w-100" (click)="goo()" aria-hidden="true" style="text-align: left; border: 2px solid rgb(99, 99, 99); background-color: rgb(99, 99, 99)">  inbox </button>
                     </div>
                    
 
@@ -83,20 +81,20 @@
 
 
 
-      <div class="col-8 h-100" style="border:2px solid red; margin: 0; padding: 0; ">
+      <div class="col-8 h-100" style=" margin: 0; padding: 0; ">
 
-          <div class="center row" style="  border: 3px dotted aqua; height: 5%;  margin: 0 0; padding: 0 0;">
+          <div class="center row" style="   height: 5%;  margin: 0 0; padding: 0 0; background-color: rgb(61, 61, 61)">
                 
 
-            <div class="col " style="border:2px solid blue;  margin: 0; padding: 0; display: flex; justify-content: space-between;">
+            <div class="col " style="  margin: 0; padding: 0; display: flex; justify-content: space-between;">
 
-                <input class="glossyBtn" style=" border-radius: 10px; width: 50%;">
+                <input class="glossyBtn" style=" border-radius: 10px; width: 50%; background-color: rgb(122, 122, 122); border: rgb(122, 122, 122); margin: 4px;" >
 
                 <div>
-                <i class="fa fa-caret-left" aria-hidden="true"></i>
-                <i class="fa fa-backward" aria-hidden="true"></i>
-                <i class="fa fa-caret-right" aria-hidden="true"></i>
-                <i class="fa fa-times" aria-hidden="true"></i>
+                <button class="fa fa-caret-left colr" aria-hidden="true"></button>
+                <button class="fa fa-backward colr" aria-hidden="true"></button>
+                <button class="fa fa-caret-right colr" aria-hidden="true"></button>
+                <button class="fa fa-times colr" aria-hidden="true"></button>
                 </div>
             </div> 
 
@@ -105,10 +103,12 @@
           </div>
 
 
-          <div class= "row overflow-auto " style = "border: 2px solid orange; height: 95%; display: fixed; background-color: orange;" > 
+          <div class= "row overflow-auto " style = " height: 95%; display: fixed; background-color: rgb(37, 40, 49);" > 
           
-          <app-comment [message]="email">  </app-comment>
-         
+          <div>
+          <app-comment [message]="email" (messageEvent) = receiveMessage($event)> </app-comment>
+          </div>  
+
 
 
           </div>
@@ -131,11 +131,10 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="border: 7px solid tomato;   ; 
-" >
-  <div class="modal-dialog-center modal-dialog" role="document" style="border: 7px solid hotpink;  display: flex; justify-content: center; align-content: center; margin: 0 auto; 
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"    >
+  <div class="modal-dialog-center modal-dialog" role="document" style=" display: flex; justify-content: center; align-content: center; margin: 0 auto; 
   ">
-    <div class="modal-content"style="border: 7px solid goldenrod; width: 100%; display: flex; justify-content: center; align-content: center">
+    <div class="modal-content" style="border: 7px solid rgb(53, 97, 100); width: 100%; display: flex; justify-content: center; align-content: center; background-color: lightslategray">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -148,11 +147,11 @@
 
           <div id="questions">  
           <p>Name</p>  
-          <input #namee namee.value='' > 
+             
           </div>  
 
           <div id="questions">
-          <p>Date</p>
+          <p appInputt>Date</p>
           <input #yearr yearr.value='' >
           </div>    
               
@@ -186,7 +185,10 @@
   
 
 
+  Message: {{messagee}}
+  <!-- <app-comment (messageEvent) = receiveMessage($event)> </app-comment> -->
 
+	
 
 
 

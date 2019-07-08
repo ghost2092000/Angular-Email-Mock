@@ -4,12 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { InboxComponent } from './inbox/inbox.component';
 import { CommentComponent } from './comment/comment.component';
+import { InputtDirective } from './inputt.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     InboxComponent,
-    CommentComponent
+    CommentComponent,
+    InputtDirective,
+    
   ],
   imports: [
     BrowserModule

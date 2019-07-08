@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Subject } from 'rxjs';
 
 interface Email {
   name: string;
@@ -57,13 +56,13 @@ export class AppComponent {
 
   if (this.y === 0){
   console.log(this.x + " " + this.y);
-  document.getElementById("redd").style.border = "5px solid red";
+  // document.getElementById("redd").style.border = "5px solid red";
   document.getElementById("redd").style.display = "none";
   }
 
   if (this.y === 1){
     console.log(this.x + " " + this.y);
-    document.getElementById("redd").style.border = "5px solid blue";
+    // document.getElementById("redd").style.border = "5px solid blue";
     document.getElementById("redd").style.display = "block";
   }
 
@@ -78,6 +77,21 @@ export class AppComponent {
     }
 
   }
+
+
+
+  messagee:string='hi';
+  //Added this for childToParent
+  receiveMessage($event){
+    this.messagee = $event;
+  }
+
+
+
+
+
+
+
 
 
 }
